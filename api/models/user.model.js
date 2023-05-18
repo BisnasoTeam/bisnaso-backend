@@ -38,6 +38,12 @@ const User = sequelize.define('user', {
    confirmation_password: {
     type: DataTypes.STRING,
     allowNull: false
+   }, 
+   role: {
+    type: DataTypes.ENUM({
+        values: ['admin', 'user']
+      }),
+    allowNull:false
    }
 });
 
